@@ -79,15 +79,26 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 	- FLUSH PRIVILEGES;
 4. composer create-project laravel/laravel panggo_service
 5. cd panggo_service
-6. php artisan serve
-7. docker
+6. composer install
+7. cp .env.example .env
+	- # DB_CONNECTION=sqlite
+	- DB_CONNECTION=mysql
+	- DB_HOST=127.0.0.1
+	- DB_PORT=3306
+	- DB_DATABASE=panggo_db
+	- DB_USERNAME=root
+	- DB_PASSWORD=Qwerty123
+8. php artisan key:generate
+9. php artisan migrate
+10. php artisan serve
+11. docker
 	- for localhost database:
 		- at terminal localhost: hostname -I
 		- at .env: DB_HOST: {ip form hostname}
 		- docker build -t panggo_service .
 		- docker run --network host -d panggo_service
 		- run the container on http://localhost:8181
-8. 
+
 
 # Architecture
 1. Operational Excellence
