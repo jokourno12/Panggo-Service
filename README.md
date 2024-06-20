@@ -81,7 +81,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 5. cd panggo_service
 6. composer install
 7. cp .env.example .env
-	- # DB_CONNECTION=sqlite
 	- DB_CONNECTION=mysql
 	- DB_HOST=127.0.0.1
 	- DB_PORT=3306
